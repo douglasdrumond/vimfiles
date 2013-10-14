@@ -1,7 +1,7 @@
 macmenu &File.New\ Tab key=<nop>
 
 if has("gui_macvim")
-    "set background=light
+    set background=light
     "set background=dark
     "colorscheme solarized
     "set guifont=Letter\ Gothic\ Std:h15

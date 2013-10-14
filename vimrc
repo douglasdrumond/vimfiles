@@ -18,6 +18,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'sjl/gundo.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
 "" vim.org
 Bundle 'YankRing.vim'
 Bundle 'Vimball'
@@ -102,3 +103,5 @@ nnoremap <silent> <F2> :YRShow<cr>
 inoremap <silent> <F2> <ESC>:YRShow<cr>
 
 nnoremap <silent> <F5> :GundoToggle<cr>
+
+
