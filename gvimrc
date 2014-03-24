@@ -4,6 +4,7 @@ if has("gui_macvim")
     set background=light
     "set background=dark
     "colorscheme solarized
+    colorscheme koehler
     "set guifont=Letter\ Gothic\ Std:h15
     "set guifont=Ubuntu\ Mono:h16
     "set guifont=Anonymous\ Pro:h16
