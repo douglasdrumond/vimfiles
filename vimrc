@@ -31,6 +31,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+set background=dark
+
 set encoding=utf-8
 set scrolloff=3
 set autoindent

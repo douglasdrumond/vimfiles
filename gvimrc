@@ -1,6 +1,5 @@
-macmenu &File.New\ Tab key=<nop>
-
 if has("gui_macvim")
+    macmenu &File.New\ Tab key=<nop>
     set background=light
     "set background=dark
     "colorscheme solarized
@@ -19,5 +18,6 @@ if has("gui_macvim")
     " uncomment to replace the Mac Command-T key to Command-T plugin
     map <D-t> :CommandT<CR>
 else
+    set background=light
     set guifont=Ubuntu\ Mono\ 12
 endif
