@@ -67,6 +67,7 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
+
 set list
 set listchars=tab:▸\ ,eol:¬
 
@@ -105,3 +106,4 @@ inoremap <silent> <F2> <ESC>:YRShow<cr>
 nnoremap <silent> <F5> :GundoToggle<cr>
 
 
+colorscheme mustang
