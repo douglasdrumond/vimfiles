@@ -19,6 +19,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 "" vim.org
 Bundle 'YankRing.vim'
 Bundle 'Vimball'
