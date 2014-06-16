@@ -83,7 +83,7 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-au FocusLost * :wa
+autocmd BufLeave,FocusLost * silent! wall
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>a :Ack

@@ -6,7 +6,7 @@ if has("gui_macvim")
     "set guifont=Letter\ Gothic\ Std:h15
     "set guifont=Ubuntu\ Mono:h16
     "set guifont=Anonymous\ Pro:h16
-    set guifont=Source\ Code\ Pro:h16
+    set guifont=Source\ Code\ Pro:h12
     "set guifont=Inconsolata:h16
     set linespace=3
     set transparency=8
