@@ -9,9 +9,10 @@ Bundle 'gmarik/vundle'
 
 " My bundles {{{
 "" github
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'wincent/Command-T'
-Bundle 'mileszs/ack.vim'
+"Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'rstacruz/sparkup'
 Bundle 'tpope/vim-surround'
@@ -22,6 +23,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'godlygeek/tabular'
+Bundle 'haya14busa/incsearch.vim'
+
 "" vim.org
 Bundle 'YankRing.vim'
 Bundle 'Vimball'
@@ -53,8 +56,23 @@ set laststatus=2
 set relativenumber
 set undofile
 
-nnoremap / /\v
-vnoremap / /\v
+"nnoremap / /\v
+"vnoremap / /\v
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+let g:incsearch#consistent_n_direction = 1
+let g:incsearch#magic = '\v'
+
 set ignorecase
 set smartcase
 set gdefault
@@ -86,7 +104,7 @@ inoremap <right> <nop>
 autocmd BufLeave,FocusLost * silent! wall
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ag
 nnoremap <leader>ft Vatzf
 nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 nnoremap <leader>q gqip

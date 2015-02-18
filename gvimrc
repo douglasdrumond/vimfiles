@@ -54,4 +54,4 @@ function! WriteRoom()
 endfunction
 
 nmap gw :exe WriteRoom()<cr>
-imap <leader>w <esc>:exe WriteRoom()<cr>i
+imap <leader>f <esc>:exe WriteRoom()<cr>i
