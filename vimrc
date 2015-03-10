@@ -24,6 +24,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'haya14busa/incsearch.vim'
+Bundle 'chrisbra/vim-diff-enhanced'
 
 "" vim.org
 Bundle 'YankRing.vim'
