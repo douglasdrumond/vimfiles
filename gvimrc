@@ -23,7 +23,9 @@ endif
 colorscheme zenburn
 
 let g:writeroom = 0
-let g:transparency = &transparency
+if has("gui_macvim")
+    let g:transparency = &transparency
+endif
 function! WriteRoom()
    if has("gui_running")
       if g:writeroom == 0
@@ -36,7 +38,9 @@ function! WriteRoom()
          set nonumber
          set noshowmode
          "set rulerformat=%{strftime('%b %e %I:%M %p')}
-         set transparency=0
+         if has("gui_macvim")
+             set transparency=0
+         endif
          hi NonText guifg=bg
       else
          let g:writeroom = 0
@@ -47,7 +51,9 @@ function! WriteRoom()
          set number
          set rulerformat=
          set showmode
-         let &transparency=g:transparency
+         if has("gui_macvim")
+             let &transparency=g:transparency
+         endif
          hi clear
       endif
    endif
