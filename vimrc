@@ -157,4 +157,6 @@ function! TestToplevel() abort
 endfunction
 au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
 
+au Filetype clojure nmap <c-c><c-k> :Require<cr>
+
 colorscheme mustang
