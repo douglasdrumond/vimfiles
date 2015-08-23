@@ -57,6 +57,8 @@ set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set laststatus=2
 set relativenumber
 set undofile
