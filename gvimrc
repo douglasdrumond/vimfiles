@@ -27,36 +27,36 @@ if has("gui_macvim")
     let g:transparency = &transparency
 endif
 function! WriteRoom()
-   if has("gui_running")
-      if g:writeroom == 0
-         let g:writeroom = 1
-         set columns=80
-         set fullscreen
-         set linebreak
-         set nocursorline
-         set nolist
-         set nonumber
-         set noshowmode
-         "set rulerformat=%{strftime('%b %e %I:%M %p')}
-         if has("gui_macvim")
-             set transparency=0
-         endif
-         hi NonText guifg=bg
-      else
-         let g:writeroom = 0
-         set cursorline
-         set list
-         set nofullscreen
-         set nolinebreak
-         set number
-         set rulerformat=
-         set showmode
-         if has("gui_macvim")
-             let &transparency=g:transparency
-         endif
-         hi clear
-      endif
-   endif
+    if has("gui_running")
+        if g:writeroom == 0
+            let g:writeroom = 1
+            set columns=80
+            set fullscreen
+            set linebreak
+            set nocursorline
+            set nolist
+            set nonumber
+            set noshowmode
+            "set rulerformat=%{strftime('%b %e %I:%M %p')}
+            if has("gui_macvim")
+                set transparency=0
+            endif
+            hi NonText guifg=bg
+        else
+            let g:writeroom = 0
+            set cursorline
+            set list
+            set nofullscreen
+            set nolinebreak
+            set number
+            set rulerformat=
+            set showmode
+            if has("gui_macvim")
+                let &transparency=g:transparency
+            endif
+            hi clear
+        endif
+    endif
 endfunction
 
 nmap gw :exe WriteRoom()<cr>
