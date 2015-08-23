@@ -25,6 +25,10 @@ Bundle 'mattn/gist-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'haya14busa/incsearch.vim'
 Bundle 'chrisbra/vim-diff-enhanced'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'vim-scripts/paredit.vim'
 
 "" vim.org
 Bundle 'YankRing.vim'
