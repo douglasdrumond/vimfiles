@@ -29,6 +29,8 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'vim-scripts/paredit.vim'
+Bundle 'venantius/vim-cljfmt'
+Bundle 'majutsushi/tagbar'
 
 "" vim.org
 Bundle 'YankRing.vim'
@@ -132,6 +134,7 @@ nnoremap <silent> <F2> :YRShow<cr>
 inoremap <silent> <F2> <ESC>:YRShow<cr>
 
 nnoremap <silent> <F5> :GundoToggle<cr>
+nnoremap <silent> <F8> :TagbarToggle<cr>
 
 function! s:align()
     let p = '^\s*|\s.*\s|\s*$'
@@ -145,8 +148,27 @@ function! s:align()
 endfunction
 inoremap <silent> <Bar> <Bar><Esc>:call <SID>align()<CR>a
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LANGUAGES
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim-cljfmt
+let g:clj_fmt_autosave = 1
+
+au Filetype html setlocal sw=2 ts=2 sts=2
+au Filetype less setlocal sw=2 ts=2 sts=2
+
+
+" Clojure
+au Filetype clojure nmap <c-c><c-k> :Require<cr>
+au Filetype clojure let g:clojure_fuzzy_indent = 1
+au Filetype clojure let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let']
+au BufNewFile,BufRead *.edn set filetype=clojure
+au Filetype clojure autocmd BufWritePre * :%s/\s\+$//e
 function! TestToplevel() abort
-    "Eval the toplevel clojure form (a deftest) and then test-var the result."
+    "Eval the toplevel clojure form (a deftest) and then test-var the
+    "result."
     normal! ^
     let line1 = searchpair('(','',')', 'bcrn', g:fireplace#skip)
     let line2 = searchpair('(','',')', 'rn', g:fireplace#skip)
@@ -157,6 +179,10 @@ function! TestToplevel() abort
 endfunction
 au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
 
-au Filetype clojure nmap <c-c><c-k> :Require<cr>
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COLOR
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme mustang
