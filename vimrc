@@ -135,6 +135,7 @@ inoremap <silent> <F2> <ESC>:YRShow<cr>
 
 nnoremap <silent> <F5> :GundoToggle<cr>
 nnoremap <silent> <F8> :TagbarToggle<cr>
+nnoremap <silent> <F10> :only<cr>
 
 function! s:align()
     let p = '^\s*|\s.*\s|\s*$'
