@@ -6,10 +6,10 @@ if has("gui_macvim")
     "set guifont=Letter\ Gothic\ Std:h15
     "set guifont=Ubuntu\ Mono:h16
     "set guifont=Anonymous\ Pro:h16
-    set guifont=Source\ Code\ Pro:h12
+    set guifont=Source\ Code\ Pro:h14
     "set guifont=Inconsolata:h16
     set linespace=3
-    set transparency=8
+    set transparency=6
     " make Mac's Option key behave as the Meta key
     "set macmeta
 
@@ -20,7 +20,8 @@ else
     set background=light
     set guifont=Ubuntu\ Mono\ 12
 endif
-colorscheme zenburn
+"colorscheme zenburn
+colorscheme mustang
 
 let g:writeroom = 0
 if has("gui_macvim")

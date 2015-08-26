@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 "Bundle 'mileszs/ack.vim'
 Bundle 'rking/ag.vim'
+Bundle 'rizzatti/dash.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'rstacruz/sparkup'
 Bundle 'tpope/vim-surround'
@@ -119,6 +120,7 @@ nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 nnoremap <leader>q gqip
 nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>egv <C-w><C-v><C-l>:e $MYGVIMRC<cr>
 
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
