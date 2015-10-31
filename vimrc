@@ -1,42 +1,44 @@
+set nocompatible
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " My bundles {{{
 "" github
 "Bundle 'Valloric/YouCompleteMe'
-Bundle 'wincent/Command-T'
+Plugin 'wincent/Command-T'
 "Bundle 'mileszs/ack.vim'
-Bundle 'rking/ag.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'rstacruz/sparkup'
-Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'godlygeek/tabular'
-Bundle 'haya14busa/incsearch.vim'
-Bundle 'chrisbra/vim-diff-enhanced'
-Bundle 'guns/vim-clojure-static'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tpope/vim-fireplace'
-Bundle 'vim-scripts/paredit.vim'
-Bundle 'venantius/vim-cljfmt'
-Bundle 'majutsushi/tagbar'
+Plugin 'rking/ag.vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'rstacruz/sparkup'
+Plugin 'tpope/vim-surround'
+Plugin 'sjl/gundo.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'godlygeek/tabular'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'chrisbra/vim-diff-enhanced'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'venantius/vim-cljfmt'
+Plugin 'majutsushi/tagbar'
 
 "" vim.org
-Bundle 'YankRing.vim'
-Bundle 'Vimball'
+Plugin 'YankRing.vim'
+Plugin 'Vimball'
 " }}}
+
+call vundle#end()            " required
 
 filetype plugin indent on     " required!
 
