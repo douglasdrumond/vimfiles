@@ -74,6 +74,8 @@ set laststatus=2
 set relativenumber
 set undofile
 
+set lazyredraw
+
 "nnoremap / /\v
 "vnoremap / /\v
 map /  <Plug>(incsearch-forward)
