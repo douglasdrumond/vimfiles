@@ -21,13 +21,17 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'leshill/vim-json'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rizzatti/dash.vim'
 Plugin 'rking/ag.vim'
 Plugin 'rstacruz/sparkup'
+Plugin 'sbdchd/neoformat'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sjl/gundo.vim'
 Plugin 'suan/vim-instant-markdown'
@@ -37,6 +41,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'venantius/vim-cljfmt'
 Plugin 'vim-scripts/paredit.vim'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/Command-T'
 
 "" vim.org
@@ -75,6 +80,28 @@ set relativenumber
 set undofile
 
 set lazyredraw
+
+" Syntastic {{{
+
+augroup js
+    "au FileType javascript setlocal foldmethod=syntax
+    "au FileType javascript setlocal foldnestmax=1
+    au FileType javascript setlocal sw=2 ts=2
+    au FileType javascript silent! :%foldopen!
+    au BufWritePre,TextChanged,InsertLeave *.js Neoformat
+
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+augroup END
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ["eslint"]
+let g:jsx_ext_required = 0
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+" }}}
 
 "nnoremap / /\v
 "vnoremap / /\v
