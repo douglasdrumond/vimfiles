@@ -226,3 +226,18 @@ au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
 " COLOR
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme mustang
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CSCOPE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocsverb
+if filereadable("cscope.out")
+else
+    if $ANDROID_BUILD_TOP !=""
+        "This assumes you have sourced the Android build environment
+        cscope add $ANDROID_BUILD_TOP/cscope.out
+ else
+        "Or, you can point to your android source directory in $ANDROID_DIR
+        cscope add $ANDROID_DIR/cscope.out
+    endif
+endif
