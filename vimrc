@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 "" github
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'mileszs/ack.vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'Yggdroot/hiPairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'amix/vim-zenroom2'
@@ -57,8 +58,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-set background=dark
 
 set encoding=utf-8
 set scrolloff=3
@@ -225,7 +224,9 @@ au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme mustang
+"colorscheme mustang
+colorscheme solarized
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CSCOPE
