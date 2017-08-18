@@ -43,6 +43,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'venantius/vim-cljfmt'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'vimwiki/vimwiki'
 Plugin 'wincent/Command-T'
 
 "" vim.org
@@ -53,6 +54,7 @@ Plugin 'Vimball'
 call vundle#end()            " required
 
 filetype plugin indent on     " required!
+syntax on
 
 set tabstop=4
 set shiftwidth=4
