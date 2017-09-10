@@ -82,6 +82,8 @@ set undofile
 
 set lazyredraw
 
+set spell spelllang=en_us
+
 " Syntastic {{{
 
 augroup js
