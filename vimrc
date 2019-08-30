@@ -226,8 +226,8 @@ au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"colorscheme mustang
-colorscheme solarized
+colorscheme zenburn
+"colorscheme solarized
 set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
