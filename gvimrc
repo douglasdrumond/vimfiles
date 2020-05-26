@@ -8,7 +8,8 @@ if has("gui_macvim")
     "set guifont=Anonymous\ Pro:h16
     "set guifont=Source\ Code\ Pro:h14
     "set guifont=Operator\ Mono:h16
-    set guifont=JetBrains\ Mono:h16
+    "set guifont=JetBrains\ Mono:h16
+    set guifont=IBM\ Plex\ Mono:h16
     "set guifont=Inconsolata:h16
     set linespace=3
     set transparency=6
@@ -20,7 +21,8 @@ if has("gui_macvim")
     map <D-t> :CommandT<CR>
 else
     set background=light
-    set guifont=JetBrains\ Mono:h16
+    "set guifont=JetBrains\ Mono:h16
+    set guifont=IBM\ Plex\ Mono:h16
     "set guifont=Ubuntu\ Mono\ 12
 endif
 "colorscheme zenburn
