@@ -11,6 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 "" github
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'mileszs/ack.vim'
+Plugin 'jacekd/vim-iawriter'
+Plugin 'logico/typewriter-vim'
 Plugin 'Yggdroot/hiPairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'

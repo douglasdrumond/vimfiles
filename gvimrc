@@ -9,10 +9,12 @@ if has("gui_macvim")
     "set guifont=Source\ Code\ Pro:h14
     "set guifont=Operator\ Mono:h16
     "set guifont=JetBrains\ Mono:h16
-    set guifont=IBM\ Plex\ Mono:h16
+
+    "set guifont=IBM\ Plex\ Mono:h16
+
     "set guifont=Inconsolata:h16
-    set linespace=3
-    set transparency=6
+"    set linespace=3
+"    set transparency=6
     " make Mac's Option key behave as the Meta key
     "set macmeta
 
@@ -26,41 +28,52 @@ else
     "set guifont=Ubuntu\ Mono\ 12
 endif
 "colorscheme zenburn
-colorscheme mustang
+"colorscheme mustang
+colorscheme iawriter
+set linespace=5
+set background=light
+set guifont=Cousine:h16
 
 let g:writeroom = 0
 if has("gui_macvim")
-    let g:transparency = &transparency
+"    let g:transparency = &transparency
 endif
 function! WriteRoom()
     if has("gui_running")
         if g:writeroom == 0
             let g:writeroom = 1
-            set columns=80
-            set fullscreen
-            set linebreak
-            set nocursorline
+            NERDTreeClose
+            Goyo
+            Limelight
             set nolist
-            set nonumber
-            set noshowmode
-            "set rulerformat=%{strftime('%b %e %I:%M %p')}
-            if has("gui_macvim")
-                set transparency=0
-            endif
-            hi NonText guifg=bg
+"           set columns=80
+"           set fullscreen
+"           set linebreak
+"           set nocursorline
+"           set nolist
+"           set nonumber
+"           set noshowmode
+"           "set rulerformat=%{strftime('%b %e %I:%M %p')}
+"           if has("gui_macvim")
+"               set transparency=0
+"           endif
+"           hi NonText guifg=bg
         else
             let g:writeroom = 0
-            set cursorline
+            Goyo
+            Limelight!
             set list
-            set nofullscreen
-            set nolinebreak
-            set number
-            set rulerformat=
-            set showmode
-            if has("gui_macvim")
-                let &transparency=g:transparency
-            endif
-            hi clear
+"           set cursorline
+"           set list
+"           set nofullscreen
+"           set nolinebreak
+"           set number
+"           set rulerformat=
+"           set showmode
+"           if has("gui_macvim")
+"               let &transparency=g:transparency
+"           endif
+"           hi clear
         endif
     endif
 endfunction
