@@ -2,7 +2,7 @@
  
   ```
   git clone git@github.com:douglasdrumz/vimfiles.git
-  ln -s `pwd`/vimfile ~/.vim
+  ln -s `pwd`/vimfiles ~/.vim
   ```
   
   or
